@@ -1,32 +1,24 @@
-importar java. util. Scanner;
+import java.util.Scanner;
 
-classe pública  Principal {
+public class CalculoConsumoCombustivel {
     public static void main(String[] args) {
-        Scanner  = novo Scanner(System.em);
+        Scanner scanner = new Scanner(System.in);
 
-        Sistema. fora. print("Digite a placa do carro: ");
-        String placa = scanner. nextLine();
+        System.out.print("Digite o tempo gasto na viagem (em horas): ");
+        double tempoViagem = scanner.nextDouble();
 
-        Sistema. fora. print("Digite o ano de fabricação: ");
-        int anoFabricacao = scanner. próximoInt();
+        System.out.print("Digite a velocidade média (em km/h): ");
+        double velocidadeMedia = scanner.nextDouble();
 
-        Validar situação do carro
-        String situacaoCarro = "";
-        se (anoFabricacao <= 2010) {
-            situacaoCarro = "Carro Velho";
-        } senão se (anoFabricacao >= 2011 && anoFabricacao <=  2021 ) {
-            situacaoCarro = "Carro Semi novo";
-        } senão se (anoFabricacao == 2022) {
-            situacaoCarro = "Carro Novo";
-        }
+        System.out.print("Digite o valor de km por litro do veículo: ");
+        double kmPorLitro = scanner.nextDouble();
 
-        Substituir vogais por *
-        String placaCensurada = placa. replaceAll("[aeiouAEIOU]", "*");
+        double distanciaPercorrida = tempoViagem * velocidadeMedia;
+        double consumoCombustivel = distanciaPercorrida / kmPorLitro;
 
-        Sistema. fora. println("Situação do carro: " + situacaoCarro);
-        Sistema. fora. printf("Ano de fabricação: %d%n", anoFabricação); // Formatação sem casas decimais
-        Sistema. fora. println("Placa censurada: " + placaCensurada);
+        System.out.println("Distância percorrida: " + distanciaPercorrida + " km");
+        System.out.println("Consumo de combustível: " + consumoCombustivel + " litros");
+
+        scanner.close();
     }
 }
-@nosde123
- 
